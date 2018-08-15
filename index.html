@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <title>Gllacy shop</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header class="page-header">
     <a class="page-header-logo">
@@ -13,7 +15,8 @@
     </a>
     <nav class="navigation">
       <ul class="site-navigation">
-        <li class="site-navigation-item"><a>Каталог</a>
+        <li class="site-navigation-item">
+          <a>Каталог</a>
           <ul class="hover-menu">
             <li class="hover-menu-item">
               <a href="#">
@@ -42,12 +45,33 @@
             </li>
           </ul>
         </li>
-        <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
-        <li class="site-navigation-item"><a href="#">О компании</a></li>
+        <li class="site-navigation-item">
+          <a href="#">Доставка и оплата</a>
+        </li>
+        <li class="site-navigation-item">
+          <a href="#">О компании</a>
+        </li>
       </ul>
       <ul class="user-navigation">
-        <li class="user-navigation-item"><a href="#">Вход</a></li>
-        <li class="user-navigation-item"><a href="#">Пусто</a></li>
+        <li class="user-navigation-item">
+          <a href="#">Вход</a>
+          <section class="login-form">
+            <h2 class="visually-hidden">Форма входа</h2>
+            <!--Форма-->
+            <button class="btn">Войти</button>
+            <ul class="login-form-list">
+              <li class="login-form-item">
+                <a href="#">Забыли пароль?</a>
+              </li>
+              <li class="login-form-item">
+                <a href="#">Новая регистрация</a>
+              </li>
+            </ul>
+          </section>
+        </li>
+        <li class="user-navigation-item">
+          <a href="#">Пусто</a>
+        </li>
       </ul>
     </nav>
     <div class="contacts">
@@ -55,116 +79,117 @@
       <p class="phone">8 812 450-25-25</p>
     </div>
   </header>
-
   <main class="container">
     <h1 class="visually-hidden">Магазин мороженного Gllacy</h1>
-
     <section class="promo">
       <ul class="slider">
+        <h2 class="visually-hidden">Промо реклама</h2>
         <li class="slider-item">
-          <h2 class="visually-hidden">Промо реклама</h2>
           <p class="promo-desc">
-            Крем-брюле и пломбир с малиновым джемом   
+            Крем-брюле и пломбир с малиновым джемом
           </p>
         </li>
         <li class="slider-item">
-          <h2 class="visually-hidden">Промо реклама</h2>
           <p class="promo-desc">
-              Шоколадный пломбир и лимонный сорбет   
+            Шоколадный пломбир и лимонный сорбет
           </p>
         </li>
         <li class="slider-item">
-          <h2 class="visually-hidden">Промо реклама</h2>
           <p class="promo-desc">
-              Пломбир с помадкой и клубничный щербет   
+            Пломбир с помадкой и клубничный щербет
           </p>
         </li>
       </ul>
       <ul class="control">
-        <li class="control-item control-item-active"><a href="#"></a></li>
-        <li class="control-item"><a href="#"></a></li>
-        <li class="control-item"><a href="#"></a></li>
+        <li class="control-item control-item-active">
+          <a href="#"></a>
+        </li>
+        <li class="control-item">
+          <a href="#"></a>
+        </li>
+        <li class="control-item">
+          <a href="#"></a>
+        </li>
       </ul>
       <a class="btn">Давайте оба</a>
     </section>
-
     <section class="banners">
-
       <h2 class="visually-hidden">Рекламные баннеры</h2>
-
       <ul class="banners-list">
         <li class="banners-item banners-malina">
           <h3 class="banners-title">Малинка даром!</h3>
-          <p class="banners-desc">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <p class="banners-desc">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку
+            малинового варенья бесплатно.</p>
           <a class="btn">Хочу варенья!</a>
         </li>
         <li class="banners-item banners-shoko">
           <h3 class="banners-title">Шоколадки даром!</h3>
-          <p class="banners-desc">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <p class="banners-desc">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной
+            присыпки совершенно бесплатно.</p>
           <a class="btn">Хочу шоколадки!</a>
         </li>
       </ul>
     </section>
-    
     <section class="hits">
-
       <h2 class="visually-hidden">Популярны товары</h2>
-
       <ul class="hits-list">
         <li class="products-item">
-          <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом" width="150" height="100">
-          <p class="products-price"><span class="price">310 ₽</span>/кг</p>
+          <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом" width="150"
+            height="100">
+          <p class="products-price">
+            <span class="price">310 ₽</span>/кг</p>
           <p class="products-desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
         </li>
         <li class="products-item">
           <img src="http://placehold.it/150x100" alt="Сливочно-кофейное" width="150" height="100">
-          <p class="products-price"><span class="price">380 ₽</span>/кг</p>
+          <p class="products-price">
+            <span class="price">380 ₽</span>/кг</p>
           <p class="products-desc">Сливочно-кофейное с кусочками шоколада</p>
         </li>
         <li class="products-item">
           <img src="http://placehold.it/150x100" alt="Сливочно-клубничное" width="150" height="100">
-          <p class="products-price"><span class="price">355 ₽</span>/кг</p>
+          <p class="products-price">
+            <span class="price">355 ₽</span>/кг</p>
           <p class="products-desc">Сливочно-кофейное с кусочками шоколада</p>
         </li>
         <li class="products-item">
           <img src="http://placehold.it/150x100" alt="Сливочное крем-брюле" width="150" height="100">
-          <p class="products-price"><span class="price">455 ₽</span>/кг</p>
+          <p class="products-price">
+            <span class="price">455 ₽</span>/кг</p>
           <p class="products-desc">Сливочное крем-брюле с карамельной подливкой</p>
         </li>
       </ul>
     </section>
-
     <section class="features">
-
       <h2 class="visually-hidden">Преимущества магазина</h2>
-
-      <h3 class="features-title">Магазин Глэйси — это онлайн- и офлайн-магазин 
-        по продаже мороженого собственного производства на развес
+      <h3 class="features-title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного
+        производства на развес
       </h3>
       <ul class="features-list">
         <li class="features-item">
           <p class="features-desc">
-            Все наше мороженое изготавливается на собственном производстве, 
-            с использованием современного оборудования и проверенных временем технологий.
+            Все наше мороженое изготавливается на собственном производстве, с использованием
+            современного оборудования и проверенных временем технологий.
           </p>
         </li>
         <li class="features-item">
           <p class="features-desc">
-            Для приготовления мороженого используются настоящие сливки и молоко 
-            высочайшего качества. Все дополнительные ингредиенты и добавки 
-            произведены из натурального, экологически чистого сырья.
+            Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
+            Все дополнительные ингредиенты и добавки произведены из натурального,
+            экологически чистого сырья.
           </p>
         </li>
         <li class="features-item">
           <p class="features-desc">
-            Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, 
+            Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний,
             с которыми нас связывает долговременное сотрудничество.
           </p>
         </li>
         <li class="features-item">
           <p class="features-desc">
-            Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, 
-            который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+            Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
+            который не дает мороженому растаять в пути и позволяет сохранить превосходный
+            вкус.
           </p>
         </li>
       </ul>
@@ -175,33 +200,33 @@
         <p class="news-desc">10 способов сервировки фруктовых щербетов к столу</p>
       </a>
     </article>
-
     <section class="newsletter">
       <p class="newsletter-desc">
-        Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего 
-        самого вкусного, что у нас происходит. Обещаем не спамить и не слать 
-        всякой ненужной ерунды. Честно =) 
+        Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
+        что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды.
+        Честно =)
       </p>
       <!--Форма-->
       <button class="btn">Отпрвить</button>
     </section>
-
     <section class="map">
       <div class="feedback-form">
         <p class="address">
-          Адрес главного офиса<br>
-          и офлайн-магазина:<br>
-          <b>ул. Большая Конюшенная</b><br>
-          <b>19/8, Санкт-Петербург</b><br>
-          Для заказов по телефону:<br>
-          <b>8 812 450-25-25</b><br>
-          (с 10 до 20 ежедневно)
+          Адрес главного офиса
+          <br> и офлайн-магазина:
+          <br>
+          <b>ул. Большая Конюшенная</b>
+          <br>
+          <b>19/8, Санкт-Петербург</b>
+          <br> Для заказов по телефону:
+          <br>
+          <b>8 812 450-25-25</b>
+          <br> (с 10 до 20 ежедневно)
         </p>
         <a href="#" class="btn">Форма обратной связи</a>
       </div>
     </section>
   </main>
-
   <footer class="page-footer">
     <ul class="social">
       <li class="social-item">
@@ -219,10 +244,18 @@
     </ul>
     <nav class="footer-nav">
       <ul class="footer-nav-list">
-        <li class="footer-nav-item"><a href="#">Для поставщиков</a></li>
-        <li class="footer-nav-item"><a href="#">О производстве</a></li>
-        <li class="footer-nav-item"><a href="#">Наши документы</a></li>
-        <li class="footer-nav-item"><a href="#">Экологические стандарты</a></li>
+        <li class="footer-nav-item">
+          <a href="#">Для поставщиков</a>
+        </li>
+        <li class="footer-nav-item">
+          <a href="#">О производстве</a>
+        </li>
+        <li class="footer-nav-item">
+          <a href="#">Наши документы</a>
+        </li>
+        <li class="footer-nav-item">
+          <a href="#">Экологические стандарты</a>
+        </li>
       </ul>
       <div class="copyright">
         <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright-logo">
@@ -234,22 +267,7 @@
       </div>
     </nav>
   </footer>
-
   <!--Ховеры-->
-  <section class="login-form">
-    <h2 class="visually-hidden">Форма входа</h2>
-    <!--Форма-->
-    <button class="btn">Войти</button>
-    <ul class="login-form-list">
-      <li class="login-form-item">
-        <a href="#">Забыли пароль?</a>
-      </li>
-      <li class="login-form-item">
-          <a href="#">Новая регистрация</a>
-        </li>
-    </ul>
-  </section>
-
   <section class="feedback-form-modal">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <h3 class="modal-title">Мы обязательно вам ответим</h3>
@@ -257,10 +275,10 @@
     <button class="btn">Отправить</button>
     <button class="modal-close">x</button>
   </section>
-
   <section class="search-form">
     <h2 class="visually-hidden">Форма поиска</h2>
     <!--Форма-->
   </section>
 </body>
+
 </html>
