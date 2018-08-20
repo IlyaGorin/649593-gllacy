@@ -52,11 +52,28 @@
       </ul>
       <ul class="user-navigation">
         <li class="user-navigation-item">
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="search-form-item">
+              <label class="visually-hidden" for="header-search">Форма поиска</label>
+              <input class="search-input" type="search" placeholder="Что ищем?" name="search" id="header-search">
+            </p> 
+          </form>
+        </li>
+        <li class="user-navigation-item">
           <a href="#">Вход</a>
           <section class="login-form">
             <h2 class="visually-hidden">Форма входа</h2>
-            <!--Форма-->
-            <button class="btn">Войти</button>
+            <form class="user-login-form" action="https://echo.htmlacademy.ru" method="post">
+              <p class="login-form-item">
+                <label class="visually-hidden" for="user-email">Электронная почта</label>
+                <input class="form-input" type="email" placeholder="Электронная почта" name="email" id="user-email">
+              </p>
+              <p class="login-form-item">
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input class="form-input" type="password" placeholder="Пароль" name="password" id="user-password">
+              </p>
+              <button type="submit" class="btn">Войти</button>
+            </form>
             <ul class="login-form-list">
               <li class="login-form-item">
                 <a href="#">Забыли пароль?</a>
@@ -131,6 +148,59 @@
     <section class="filters">
       <h2 class="filters-title">Сливочное мороженное</h2>
       <!--Фильтры-->
+      <form action="https://echo.htmlacademy.ru" method="post" class="filters-form">
+        <fieldset>
+          <label for="user-select">Сортировка:</label>
+          <select name="select-list" id="user-select">
+            <option value="по популярности">по популярности</option>
+            <option value="сначала недорогие">сначала недорогие</option>
+            <option value="сначала дорогие">сначала дорогие</option>
+            <option value="по жирности">по жирности</option>
+          </select>
+          <label for="">Цена: 100 руб.-500 руб.</label>
+        <!--Ползунки-->
+          <label class="fat-percentage-list">
+            <p class="fat-percentage-title">
+              Жирность:
+            </p>
+            <p class="fat-percentage-item">
+              <input type="radio" name="fat-percentage" value="0%">0&#37;
+            </p>
+            <p class="fat-percentage-item">
+              <input type="radio" name="fat-percentage" value="до 10%" checked>до 10&#37;
+            </p> 
+            <p class="fat-percentage-item">
+              <input type="radio" name="fat-percentage" value="до 30%">до 30&#37;
+            </p>
+            <p class="fat-percentage-item">
+              <input type="radio" name="fat-percentage" value="выше 30%">выше 30&#37;
+            </p>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label class="ingredients-list">
+            <p class="ingredients-title">
+              Наполнители:
+            </p>
+            <p class="ingredients-item">
+              <input type="checkbox" name="ingredients" checked>шоколадные
+            </p>
+            <p class="ingredients-item">
+              <input type="checkbox" name="ingredients" checked>сахарные присыпки
+            </p>
+            <p class="ingredients-item">
+              <input type="checkbox" name="ingredients">фрукты
+            </p>
+            <p class="ingredients-item">
+              <input type="checkbox" name="ingredients">сиропы
+            </p>
+            <p class="ingredients-item">
+              <input type="checkbox" name="ingredients">джемы
+            </p>
+          </label>
+          <button type="submit">Применить</button>
+        </fieldset>
+      </form>
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Каталог товаров</h2>

@@ -52,11 +52,28 @@
       </ul>
       <ul class="user-navigation">
         <li class="user-navigation-item">
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="search-form-item">
+              <label class="visually-hidden" for="header-search">Форма поиска</label>
+              <input class="search-input" type="search" placeholder="Что ищем?" name="search" id="header-search">
+            </p> 
+          </form>
+        </li>
+        <li class="user-navigation-item">
           <a href="#">Вход</a>
           <section class="login-form">
             <h2 class="visually-hidden">Форма входа</h2>
-            <!--Форма-->
-            <button class="btn">Войти</button>
+            <form class="user-login-form" action="https://echo.htmlacademy.ru" method="post">
+              <p class="login-form-item">
+                <label class="visually-hidden" for="user-email">Электронная почта</label>
+                <input class="form-input" type="email" placeholder="Электронная почта" name="email" id="user-email">
+              </p>
+              <p class="login-form-item">
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input class="form-input" type="password" placeholder="Пароль" name="password" id="user-password">
+              </p>
+              <button type="submit" class="btn">Войти</button>
+            </form>
             <ul class="login-form-list">
               <li class="login-form-item">
                 <a href="#">Забыли пароль?</a>
@@ -200,8 +217,13 @@
         что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды.
         Честно =)
       </p>
-      <!--Форма-->
-      <button class="btn">Отпрвить</button>
+      <form action="https://echo.htmlacademy.ru" method="post" class="newsletter-form">
+        <p>
+          <label for="newsletter-email" class="visually-hidden">Форма ввода электронной почты</label>
+          <input type="email" name="email" id="newsletter-email" placeholder="Электронная почта">
+        </p>
+        <button type="submit" class="btn">Отправить</button>
+      </form>
     </section>
     <section class="map">
       <div class="feedback-form">
@@ -265,13 +287,22 @@
   <section class="feedback-form-modal">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <h3 class="modal-title">Мы обязательно вам ответим</h3>
-    <!--Форма-->
-    <button class="btn">Отправить</button>
-    <button class="modal-close">x</button>
-  </section>
-  <section class="search-form">
-    <h2 class="visually-hidden">Форма поиска</h2>
-    <!--Форма-->
+    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="feedback-form-item">
+        <label for="user-name" class="visually-hidden">Имя пользователя</label>
+        <input type="text" class="feedback-input" name="name" id="user-name" placeholder="Как вас зовут?">
+      </p>
+      <p class="feedback-form-item">
+        <label for="feedback-form-email" class="visually-hidden">Электронная почта</label>
+        <input type="email" class="feedback-input" name="email" id="feedback-form-email" placeholder="Ваша почта для ответа?">
+      </p>
+      <p class="feedback-form-item">
+        <label for="feedback-form-text" class="visually-hidden">Коментарии и пожелания</label>
+        <textarea name="text" id="feedback-form-text" cols="30" rows="10" placeholder="Напишите что нибудь?"></textarea>
+      </p>
+      <button class="btn" type="submit">Отправить</button>
+    </form>
+    <button type="button" class="modal-close">Закрыть</button>
   </section>
 </body>
 </html>
