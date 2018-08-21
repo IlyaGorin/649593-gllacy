@@ -149,71 +149,61 @@
       <h2 class="filters-title">Сливочное мороженное</h2>
       <!--Фильтры-->
       <form action="https://echo.htmlacademy.ru" method="post" class="filters-form">
-        <fieldset>
-          <label for="user-select">Сортировка:</label>
+        <fieldset class="select-list">
+          <legend>
+            Сортировка:
+          </legend>
           <select name="select-list" id="user-select" class="select-list-form">
             <option value="popular">по популярности</option>
             <option value="inexpensive">сначала недорогие</option>
             <option value="expensive">сначала дорогие</option>
             <option value="fat-content">по жирности</option>
           </select>
-          <label for="">Цена: 100 руб.-500 руб.</label>
-        <!--Ползунки-->
-            <p class="fat-percentage-title">
-              Жирность:
-            </p>
-            <label>
-              <p class="fat-percentage-item">
-                <input type="radio" name="fat-percentage" value="0%">0&#37;
-              </p>
-            </label>
-            <label>
-              <p class="fat-percentage-item">
-                <input type="radio" name="fat-percentage" value="up-to-10%" checked>до 10&#37;
-              </p> 
-            </label>
-            <label>
-              <p class="fat-percentage-item">
-                <input type="radio" name="fat-percentage" value="up-to-30%">до 30&#37;
-              </p>
-            </label>
-            <label>
-              <p class="fat-percentage-item">
-                <input type="radio" name="fat-percentage" value="above-30%">выше 30&#37;
-              </p>
-            </label>
         </fieldset>
-        <fieldset>
-          <p class="ingredients-title">
+        <fieldset class="range">
+          <legend class="visually-hidden">
+            Ценовой диапозон
+          </legend>
+          <!--Ползунки-->
+        </fieldset>
+        <fieldset class="radiobutton-group">
+          <legend>
+            Жирность:
+          </legend>
+          <label>
+            <input type="radio" name="fat-percentage" value="0%">0&#37;
+          </label>
+          <label>
+            <input type="radio" name="fat-percentage" value="up-to-10%" checked>до 10&#37;
+          </label>
+          <label>
+            <input type="radio" name="fat-percentage" value="up-to-30%">до 30&#37;
+          </label>
+          <label>
+            <input type="radio" name="fat-percentage" value="above-30%">выше 30&#37;
+          </label>
+        </fieldset>
+        <fieldset class="checkbox-group">
+          <legend>
             Наполнители:
-          </p>
+          </legend>
           <label>
-            <p class="ingredients-item">
-              <input type="checkbox" name="ingredients" value="chocolate" checked>шоколадные
-            </p>
+            <input type="checkbox" name="ingredients-chocolate" value="chocolate" checked>шоколадные
           </label>
           <label>
-            <p class="ingredients-item">
-              <input type="checkbox" name="ingredients" value="sugar-powder" checked>сахарные присыпки
-            </p>
+            <input type="checkbox" name="ingredients-sugar-powder" value="sugar-powder" checked>сахарные присыпки
           </label>
           <label>
-            <p class="ingredients-item">
-              <input type="checkbox" name="ingredients" value="fruit">фрукты
-            </p>
+            <input type="checkbox" name="ingredients-fruit" value="fruit">фрукты
           </label>
           <label>
-            <p class="ingredients-item">
-              <input type="checkbox" name="ingredients" value="syrup">сиропы
-            </p>
+            <input type="checkbox" name="ingredients-syrup" value="syrup">сиропы
           </label>
           <label>
-            <p class="ingredients-item">
-              <input type="checkbox" name="ingredients" value="jam">джемы
-            </p>
+            <input type="checkbox" name="ingredients-jam" value="jam">джемы
           </label>
-          <button type="submit">Применить</button>
         </fieldset>
+        <button type="submit">Применить</button>
       </form>
     </section>
     <section class="catalog">
