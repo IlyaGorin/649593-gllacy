@@ -43,22 +43,15 @@ a {
   font-weight: 700;
 
   background-color: #e84d37;
-
-  background-image: -moz-linear-gradient( 90deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
+  background-image: linear-gradient(rgb(202,56,36) 0%, rgb(242,104,67) 100%);
 }
 
 .btn:hover {
-  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: linear-gradient(180deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
 }
 
 .btn:active {
-  background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: linear-gradient(rgb(242,104,67) 0%, rgb(231,74,53) 100%);
 }
 /* header */
 
@@ -68,10 +61,7 @@ a {
   font-weight: 700;
 }
 
-.site-navigation,
-.hover-menu,
-.user-navigation,
-.login-form-list {
+.site-navigation {
   margin: 0;
   padding: 0;
 
@@ -87,7 +77,24 @@ a {
   text-decoration-color: rgba(255, 255, 255, 0.2)
 }
 
+.site-navigation-item:hover{
+  background-color: #f8f7f4;
+}
+
+.site-navigation-item-active {
+  color: #ffffff;
+  background-color: #d07058;
+}
+
+.site-navigation-link:hover,
+.site-navigation-item:hover .site-navigation-link {
+  color: #333333;
+}
+
 .hover-menu {
+  margin: 0;
+  padding: 0;
+
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -95,11 +102,20 @@ a {
   background-color: #ffffff;
 
   border-radius: 3px;
+  list-style: none;
 }
 
 .hover-menu a {
   color: #323232;
   text-decoration: none;
+}
+
+.hover-menu-item:hover {
+  background-color: #fbded7;
+}
+
+.hover-menu-item:active {
+  background-color: #f6b5a5;
 }
 
 .hover-menu-bold {
@@ -109,9 +125,23 @@ a {
 }
 
 .user-navigation {
+  margin: 0;
+  padding: 0;
+
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 16px;
+
+  list-style: none;
+}
+
+.user-navigation-item-link:hover,
+.user-navigation-item:hover .user-navigation-item-link {
+  color: #323232;
+}
+
+.user-navigation-item-hover:hover {
+  background-color: #f8f7f4;
 }
 
 .login-form {
@@ -120,6 +150,14 @@ a {
   background-color: #f8f7f4;
   border-radius: 4px;
 }
+
+.login-form-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 
 .login-form-list a {
   font-size: 13px;
@@ -149,11 +187,7 @@ a {
 
 /*index-Main */
 
-.slider,
-.control,
-.banners-list,
-.hits-list,
-.features-list {
+.slider {
   margin: 0;
   padding: 0;
 
@@ -166,6 +200,13 @@ a {
   background-color: #849d8f;
 }
 
+.control {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 .promo-desc {
   font-size: 60px;
   line-height: 60px;
@@ -176,6 +217,13 @@ a {
 .promo .btn {
   font-size: 32px;
   line-height: 44px;
+}
+
+.banners-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .banners-raspberry {
@@ -208,6 +256,13 @@ a {
 .banners-list a {
   font-size: 18px;
   line-height: 24px;
+}
+
+.hits-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .products-price {
@@ -245,7 +300,12 @@ a {
 }
 
 .features-list {
+  margin: 0;
+  padding: 0;
+
   font-weight: 400;
+
+  list-style: none;
 }
 
 .news-blog {
@@ -450,10 +510,7 @@ a {
   border: none;
 }
 
-.select-list legend,
-.range legend,
-.radiobutton-group legend,
-.checkbox-group legend {
+.fieldset-title {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
