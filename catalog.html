@@ -134,7 +134,7 @@
                       <a href="#" class="basket-delete-btn-link"></a>
                     </td>
                     <td class="basket-img">
-                      <img src="img/creamy-strawberry.jpg" alt="Картинка товара" width="33" height="33">
+                      <img src="img/creamy-strawberry.jpg" alt="Картинка товара" width="33" height="33" class="basket-img-pic">
                     </td>
                     <td class="basket-product">
                       <a href="#" class="basket-product-link">Клубничный пломбир с присыпкой из белого шоколада</a>
@@ -179,7 +179,7 @@
         <h2 class="filters-title">Сливочное мороженое</h2>
         <!--Фильтры-->
         <form action="https://echo.htmlacademy.ru" method="post" class="filters-form">
-          <div class="form-container">
+          <div class="fieldset-container">
             <fieldset class="select-list">
               <legend class="fieldset-title">
                 Сортировка:
@@ -192,53 +192,76 @@
               </select>
             </fieldset>
             <fieldset class="range">
-              <legend class="visually-hidden">
-                Ценовой диапозон
-              </legend>
-              <!--Ползунки-->
+              <legend class="fieldset-title">Цена:</legend>
+              <div class="price-controls">
+                <label class="min-price">
+                  <input name="min-price" type="text" value="100 руб." class="range-input">
+                </label>
+                <label class="max-price">
+                    - <input name="max-price" type="text" value="500 руб." class="range-input">
+                </label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar">
+
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+              </div>
             </fieldset>
             <fieldset class="radiobutton-group">
               <legend class="fieldset-title">
                 Жирность:
               </legend>
-              <div class="radiobutton-group-container">
-                <label>
-                  <input type="radio" name="fat-percentage" value="0%">0&#37;
-                </label>
-                <label>
-                  <input type="radio" name="fat-percentage" value="up-to-10%" checked>до 10&#37;
-                </label>
-                <label>
-                  <input type="radio" name="fat-percentage" value="up-to-30%">до 30&#37;
-                </label>
-                <label>
-                  <input type="radio" name="fat-percentage" value="above-30%">выше 30&#37;
-                </label>
-              </div>
+              <ul class="radiobutton-group-container">
+                <li class="radiobutton-group-item">
+                  <input type="radio" name="fat-percentage" value="0%" id="zero" class="visually-hidden radiobutton-group-input">
+                  <label for="zero" class="radiobutton-label">0&#37;</label>
+                </li>
+                <li class="radiobutton-group-item">
+                  <input type="radio" name="fat-percentage" value="up-to-10%" id="less-than-ten" checked class="visually-hidden radiobutton-group-input">
+                  <label for="less-than-ten" class="radiobutton-label">до 10&#37;</label>
+                </li>
+                <li class="radiobutton-group-item">
+                  <input type="radio" name="fat-percentage" value="up-to-30%" id="less-than-thirty" class="visually-hidden radiobutton-group-input">
+                  <label for="less-than-thirty" class="radiobutton-label">до 30&#37;</label>
+                </li>
+                <li class="radiobutton-group-item">
+                  <input type="radio" name="fat-percentage" value="above-30%" id="above-thirty" class="visually-hidden radiobutton-group-input">
+                  <label for="above-thirty" class="radiobutton-label">выше 30&#37;</label>
+                </li>
+              </ul>
             </fieldset>
           </div>
-          <div class="form-container">
+          <div class="fieldset-container">
             <fieldset class="checkbox-group">
               <legend class="fieldset-title">
                 Наполнители:
               </legend>
-              <div class="checkbox-group-container">
-                <label>
-                  <input type="checkbox" name="ingredients-chocolate" value="chocolate" checked>шоколадные
-                </label>
-                <label>
-                  <input type="checkbox" name="ingredients-sugar-powder" value="sugar-powder" checked>сахарные присыпки
-                </label>
-                <label>
-                  <input type="checkbox" name="ingredients-fruit" value="fruit">фрукты
-                </label>
-                <label>
-                  <input type="checkbox" name="ingredients-syrup" value="syrup">сиропы
-                </label>
-                <label>
-                  <input type="checkbox" name="ingredients-jam" value="jam">джемы
-                </label>
-              </div>
+              <ul class="checkbox-group-container">
+                <li class="checkbox-group-item">
+                  <input type="checkbox" name="ingredients-chocolate" value="chocolate" id="chocolate-id" class="visually-hidden checkbox-input" checked>
+                  <label for="chocolate-id" class="checkbox-label">шоколадные</label>
+                </li>
+                <li class="checkbox-group-item">
+                  <input type="checkbox" name="ingredients-sugar-powder" value="sugar-powder" checked id="sugar-id" class="visually-hidden checkbox-input">
+                  <label for="sugar-id" class="checkbox-label">сахарные присыпки</label>
+                </li>
+                <li class="checkbox-group-item">
+                  <input type="checkbox" name="ingredients-fruit" value="fruit" id="fruit-id" class="visually-hidden checkbox-input">
+                  <label for="fruit-id" class="checkbox-label">фрукты</label>
+                </li>
+                <li class="checkbox-group-item">
+                  <input type="checkbox" name="ingredients-syrup" value="syrup" id="syrup-id" class="visually-hidden checkbox-input">
+                  <label for="syrup-id" class="checkbox-label">сиропы</label>
+                </li>
+                <li class="checkbox-group-item">
+                  <input type="checkbox" name="ingredients-jam" value="jam" id="jam-id" class="visually-hidden checkbox-input">
+                  <label for="jam-id" class="checkbox-label">джемы</label>
+                </li>
+              </ul>
             </fieldset>
             <button type="submit" class="filters-btn">Применить</button>
           </div>
@@ -249,7 +272,7 @@
           <h2 class="visually-hidden">Каталог товаров</h2>
           <ul class="products hits-list">
             <li class="products-item">
-              <div class="products-item-container">
+              <div class="products-item-container-catalog">
                 <img src="img/creamy-with-orange-jam.jpg" alt="Сливочное с апельсиновым джемом" width="267" height="267">
               </div>
               <p class="products-price">
@@ -259,7 +282,7 @@
               <a href="#" class="btn products-btn">Бысрый просмотр</a>
             </li>
             <li class="products-item">
-              <div class="products-item-container">
+              <div class="products-item-container-catalog">
                 <img src="img/creamy-coffee.jpg" alt="Сливочно-кофейное" width="267" height="267">
               </div>
               <p class="products-price">
@@ -269,7 +292,7 @@
               <a href="#" class="btn products-btn">Быстрый просмотр</a>
             </li>
             <li class="products-item">
-              <div class="products-item-container">
+              <div class="products-item-container-catalog">
                 <img src="img/creamy-strawberry.jpg" alt="Сливочно-клубничное" width="267" height="267">
               </div>
               <p class="products-price">
@@ -279,7 +302,7 @@
               <a href="#" class="btn products-btn">Быстрый просмотр</a>
             </li>
             <li class="products-item">
-              <div class="products-item-container">
+              <div class="products-item-container-catalog">
                 <img src="img/creamy-creme-brulee.jpg" alt="Сливочное крем-брюле" width="267" height="267">
               </div>
               <p class="products-price">
@@ -289,7 +312,7 @@
               <a href="#" class="btn products-btn">Быстрый просмотр</a>
             </li>
             <li class="products-item">
-              <div class="products-item-container">
+              <div class="products-item-container-catalog">
                 <img src="img/creamy-with-cranberry-jam.jpg" alt="Сливочное с брусничным джемом" width="267"
                 height="267">
               </div>
@@ -300,7 +323,7 @@
               <a href="#" class="btn products-btn">Быстрый просмотр</a>
             </li>
             <li class="products-item">
-              <div class="products-item-container">
+              <div class="products-item-container-catalog">
                 <img src="img/cream-blueberry.jpg" alt="Сливочно-черничное" width="267" height="267">
               </div>
               <p class="products-price">
@@ -310,7 +333,7 @@
               <a href="#" class="btn products-btn">Быстрый просмотр</a>
             </li>
             <li class="products-item">
-              <div class="products-item-container">
+              <div class="products-item-container-catalog">
                 <img src="img/creamy-lemon.jpg" alt="Сливочно-лимонное" width="267" height="267">
               </div>
               <p class="products-price">
@@ -320,7 +343,7 @@
               <a href="#" class="btn products-btn">Быстрый просмотр</a>
             </li>
             <li class="products-item">
-              <div class="products-item-container">
+              <div class="products-item-container-catalog">
                 <img src="img/creamy-with-chocolate-chips.jpg" alt="Сливочное с шоколадной стружкой" width="267"
                 height="267">
               </div>
@@ -331,7 +354,7 @@
               <a href="#" class="btn products-btn">Быстрый просмотр</a>
             </li>
             <li class="products-item">
-              <div class="products-item-container">
+              <div class="products-item-container-catalog">
                 <img src="img/creamy-vanilla.jpg" alt="Сливочно-ванильное" width="267" height="267">
               </div>
               <p class="products-price">
@@ -341,7 +364,7 @@
               <a href="#" class="btn products-btn">Быстрый просмотр</a>
             </li>
             <li class="products-item">
-              <div class="products-item-container">
+              <div class="products-item-container-catalog">
                 <img src="img/creamy-with-mentol-syrop.jpg" alt="Сливочное с ментоловым сиропом" width="267"
                 height="267">
               </div>
@@ -352,7 +375,7 @@
               <a href="#" class="btn products-btn">Быстрый просмотр</a>
             </li>
             <li class="products-item">
-              <div class="products-item-container">
+              <div class="products-item-container-catalog">
                 <img src="img/creamy-with-dark-chocolate.jpg" alt="Сливочное с кусочками черного шоколада"
                 width="267" height="267">
               </div>
@@ -363,7 +386,7 @@
               <a href="#" class="btn products-btn">Быстрый просмотр</a>
             </li>
             <li class="products-item">
-              <div class="products-item-container">
+              <div class="products-item-container-catalog">
                 <img src="img/creamy-with-mint-syrup.jpg" alt="Сливочное с мятным сиропом" width="267"
                 height="267">
               </div>
@@ -436,7 +459,7 @@
         </ul>
         <nav class="footer-nav">
           <ul class="footer-nav-list">
-            <li class="footer-nav-item">
+            <li class="footer-nav-item footer-nav-item-active">
               <a href="#">Для поставщиков</a>
             </li>
             <li class="footer-nav-item">
