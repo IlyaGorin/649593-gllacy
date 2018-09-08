@@ -69,7 +69,7 @@
               <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
                 <p class="search-form-item">
                   <label class="visually-hidden" for="header-search">Форма поиска</label>
-                  <input class="search-input" type="search" placeholder="Что ищем?" name="search" id="header-search">
+                  <input class="search-input" type="search" placeholder="Что ищем?" name="search" id="header-search" autocomplete="off">
                 </p>
               </form>
             </li>
@@ -86,11 +86,11 @@
                 <form class="user-login-form" action="https://echo.htmlacademy.ru" method="post">
                   <p class="login-form-item">
                     <label class="visually-hidden" for="user-email">Электронная почта</label>
-                    <input class="form-input" type="email" placeholder="Электронная почта" name="email" id="user-email">
+                    <input class="form-input" type="email" placeholder="Электронная почта" name="email" id="user-email" autocomplete="off">
                   </p>
                   <p class="login-form-item">
                     <label class="visually-hidden" for="user-password">Пароль</label>
-                    <input class="form-input" type="password" placeholder="Пароль" name="password" id="user-password">
+                    <input class="form-input" type="password" placeholder="Пароль" name="password" id="user-password" autocomplete="off">
                   </p>
                   <div class="login-form-container">
                     <button type="submit" class="btn login-form-btn">Войти</button>
@@ -339,10 +339,10 @@
     </footer>
   </div>
   <!--Ховеры-->
-  <section class="feedback-form-modal display-none">
+  <section class="feedback-form-section">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <h3 class="modal-title">Мы обязательно вам ответим!</h3>
-    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+    <form class="feedback-form-modal" action="https://echo.htmlacademy.ru" method="post">
       <p class="feedback-form-item">
         <label for="user-name" class="visually-hidden">Имя пользователя</label>
         <input type="text" class="feedback-input" name="name" id="user-name" placeholder="Как вас зовут?">
@@ -353,11 +353,14 @@
       </p>
       <p class="feedback-form-item">
         <label for="feedback-form-text" class="visually-hidden">Коментарии и пожелания</label>
-        <textarea name="text" id="feedback-form-text" cols="30" rows="10" placeholder="Напишите что нибудь?"></textarea>
+        <textarea name="text" id="feedback-form-text" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
       </p>
-      <button class="btn" type="submit">Отправить</button>
+      <button class="btn modal-form-btn" type="submit">Отправить</button>
     </form>
     <button type="button" class="modal-close">Закрыть</button>
   </section>
+  <div class="modal-overlay">
+
+  </div>
 </body>
 </html>
