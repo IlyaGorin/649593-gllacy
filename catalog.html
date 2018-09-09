@@ -198,7 +198,7 @@
                   <input name="min-price" type="text" value="100 руб." class="range-input">
                 </label>
                 <label class="max-price">
-                    - <input name="max-price" type="text" value="500 руб." class="range-input">
+                  <input name="max-price" type="text" value="&#8211 500 руб." class="range-input">
                 </label>
               </div>
               <div class="range-controls">
@@ -217,20 +217,33 @@
               </legend>
               <ul class="radiobutton-group-container">
                 <li class="radiobutton-group-item">
-                  <input type="radio" name="fat-percentage" value="0%" id="zero" class="visually-hidden radiobutton-group-input">
-                  <label for="zero" class="radiobutton-label">0&#37;</label>
+                  <label class="radiobutton-label">
+                    <input type="radio" name="fat-percentage" value="0%" id="zero" class="visually-hidden radiobutton-group-input">
+                    <span class="radiobutton-indicator"></span>
+                    0&#37;
+                  </label>
                 </li>
                 <li class="radiobutton-group-item">
-                  <input type="radio" name="fat-percentage" value="up-to-10%" id="less-than-ten" checked class="visually-hidden radiobutton-group-input">
-                  <label for="less-than-ten" class="radiobutton-label">до 10&#37;</label>
+                  <label class="radiobutton-label">
+                    <input type="radio" name="fat-percentage" value="up-to-10%"
+                    id="less-than-ten" checked class="visually-hidden radiobutton-group-input">
+                    <span class="radiobutton-indicator"></span>
+                    до 10&#37;
+                  </label>
                 </li>
                 <li class="radiobutton-group-item">
-                  <input type="radio" name="fat-percentage" value="up-to-30%" id="less-than-thirty" class="visually-hidden radiobutton-group-input">
-                  <label for="less-than-thirty" class="radiobutton-label">до 30&#37;</label>
+                  <label class="radiobutton-label">
+                    <input type="radio" name="fat-percentage" value="up-to-30%" id="less-than-thirty" class="visually-hidden radiobutton-group-input">
+                    <span class="radiobutton-indicator"></span>
+                    до 30&#37;
+                  </label>
                 </li>
                 <li class="radiobutton-group-item">
-                  <input type="radio" name="fat-percentage" value="above-30%" id="above-thirty" class="visually-hidden radiobutton-group-input">
-                  <label for="above-thirty" class="radiobutton-label">выше 30&#37;</label>
+                  <label class="radiobutton-label">
+                    <input type="radio" name="fat-percentage" value="above-30%" id="above-thirty" class="visually-hidden radiobutton-group-input">
+                    <span class="radiobutton-indicator"></span>
+                    выше 30&#37;
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -242,24 +255,40 @@
               </legend>
               <ul class="checkbox-group-container">
                 <li class="checkbox-group-item">
-                  <input type="checkbox" name="ingredients-chocolate" value="chocolate" id="chocolate-id" class="visually-hidden checkbox-input" checked>
-                  <label for="chocolate-id" class="checkbox-label">шоколадные</label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="ingredients-chocolate" value="chocolate" id="chocolate-id" class="visually-hidden checkbox-input" checked>
+                    <span class="checkbox-indicator"></span>
+                    шоколадные
+                  </label>
                 </li>
                 <li class="checkbox-group-item">
-                  <input type="checkbox" name="ingredients-sugar-powder" value="sugar-powder" checked id="sugar-id" class="visually-hidden checkbox-input">
-                  <label for="sugar-id" class="checkbox-label">сахарные присыпки</label>
+                  <label for="sugar-id" class="checkbox-label">
+                    <input type="checkbox" name="ingredients-sugar-powder" value="sugar-powder" checked id="sugar-id" class="visually-hidden checkbox-input">
+                    <span class="checkbox-indicator"></span>
+                    сахарные присыпки
+                  </label>
                 </li>
                 <li class="checkbox-group-item">
-                  <input type="checkbox" name="ingredients-fruit" value="fruit" id="fruit-id" class="visually-hidden checkbox-input">
-                  <label for="fruit-id" class="checkbox-label">фрукты</label>
+                  <label for="fruit-id" class="checkbox-label">
+                    <input type="checkbox" name="ingredients-fruit" value="fruit" id="fruit-id" class="visually-hidden checkbox-input">
+                    <span class="checkbox-indicator"></span>
+                    фрукты
+                  </label>
                 </li>
                 <li class="checkbox-group-item">
-                  <input type="checkbox" name="ingredients-syrup" value="syrup" id="syrup-id" class="visually-hidden checkbox-input">
-                  <label for="syrup-id" class="checkbox-label">сиропы</label>
+
+                  <label for="syrup-id" class="checkbox-label">
+                    <input type="checkbox" name="ingredients-syrup" value="syrup" id="syrup-id" class="visually-hidden checkbox-input">
+                    <span class="checkbox-indicator"></span>
+                    сиропы
+                  </label>
                 </li>
                 <li class="checkbox-group-item">
-                  <input type="checkbox" name="ingredients-jam" value="jam" id="jam-id" class="visually-hidden checkbox-input">
-                  <label for="jam-id" class="checkbox-label">джемы</label>
+                  <label for="jam-id" class="checkbox-label">
+                    <input type="checkbox" name="ingredients-jam" value="jam" id="jam-id" class="visually-hidden checkbox-input">
+                    <span class="checkbox-indicator"></span>
+                    джемы
+                  </label>
                 </li>
               </ul>
             </fieldset>
