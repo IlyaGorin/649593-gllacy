@@ -1171,43 +1171,29 @@ img {
 }
 
 .map {
+  position: relative;
+
+  height: 430px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #e9e5cf;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 430px;
 }
 
-.map-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  height: 430px;
-}
 
 .feedback-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  right: 379px;
+  transform: translatey(-50%);
 
   padding-top: 30px;
   padding-left: 26px;
+  padding-bottom: 20px;
   width: 302px;
   min-height: 305px;
 
@@ -1219,6 +1205,7 @@ img {
   background-color: #ffffff;
 
   border-radius: 15px;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.4);
 }
 
 .address {
@@ -2222,7 +2209,10 @@ img {
 
 .modal-show {
   display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
 }
+
 .modal-title {
   margin: 0;
   margin-bottom: 20px;
@@ -2403,6 +2393,26 @@ img {
 
 .overlay-show {
   display: block;
+}
+
+/* Анимация */
+
+@keyframes bounce {
+  0% {transform: translateY(-2000px);}
+  70% {transform: translateY(30px);}
+  90% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
+}
+
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateY(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px)}
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
 /* .declaration-order {
   Позиционирование
