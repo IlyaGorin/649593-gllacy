@@ -61,3 +61,8 @@ window.addEventListener('keydown', function (evt) {
     }
   }
 });
+
+overlay.addEventListener('click', function(evt){
+  popup.classList.remove('modal-show');
+  overlay.classList.remove('overlay-show');
+});
