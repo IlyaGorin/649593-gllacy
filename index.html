@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-  <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-  <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+  <input class="visually-hidden product-1" type="radio" id="product-1" name="toggle" checked>
+  <input class="visually-hidden product-2" type="radio" id="product-2" name="toggle">
+  <input class="visually-hidden product-3" type="radio" id="product-3" name="toggle">
   <div class="site-wrapper">
     <header class="page-header">
       <div class="wrapper header-container">
@@ -134,19 +134,19 @@
           <label for="product-3">Третий</label>
         </div>
         <ul class="slider-list">
-          <li class="slider-item slide" id="slide1">
+          <li class="slider-item slide slide1">
             <h3 class="slide-title">
               Крем-брюле и пломбир с малиновым джемом
             </h3>
             <a class="btn slide-button" href="#">Давайте оба!</a>
           </li>
-          <li class="slider-item slide" id="slide2">
+          <li class="slider-item slide slide2">
             <h3 class="slide-title">
               Шоколадный пломбир и лимонный сорбет
             </h3>
             <a class="btn slide-button" href="#">Давайте оба!</a>
           </li>
-          <li class="slider-item slide" id="slide3">
+          <li class="slider-item slide slide3">
             <h3 class="slide-title">
               Пломбир с помадкой и клубничный щербет
             </h3>
@@ -183,7 +183,7 @@
               <span class="price">310</span>/кг
             </p>
             <p class="products-desc">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-            <a href="#" class="btn products-btn">Бысрый просмотр</a>
+            <a href="#" class="btn products-btn">Быстрый просмотр</a>
           </li>
           <li class="products-item">
             <div class="products-item-container">
@@ -193,7 +193,7 @@
               <span class="price">380</span>/кг
             </p>
             <p class="products-desc">Сливочно-кофейное с кусочками шоколада</p>
-            <a href="#" class="btn products-btn">Бысрый просмотр</a>
+            <a href="#" class="btn products-btn">Быстрый просмотр</a>
           </li>
           <li class="products-item">
             <div class="products-item-container">
@@ -203,7 +203,7 @@
               <span class="price">355</span>/кг
             </p>
             <p class="products-desc">Сливочно-клубничное с присыпкой из белого шоколада</p>
-            <a href="#" class="btn products-btn">Бысрый просмотр</a>
+            <a href="#" class="btn products-btn">Быстрый просмотр</a>
           </li>
           <li class="products-item">
             <div class="products-item-container">
@@ -213,7 +213,7 @@
               <span class="price">415</span>/кг
             </p>
             <p class="products-desc">Сливочное крем-брюле с карамельной подливкой</p>
-            <a href="#" class="btn products-btn">Бысрый просмотр</a>
+            <a href="#" class="btn products-btn">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -249,7 +249,7 @@
         <article class="news-blog">
           <h2 class="news-blog-title">Новое в нашем блоге</h2>
           <a href="#" class="news-link">
-            <p class="news-desc">10 способов сервировки фруктовых щербетов к столу</p>
+            <span class="news-desc">10 способов сервировки фруктовых щербетов к столу</span>
           </a>
         </article>
         <section class="newsletter">
@@ -269,10 +269,6 @@
             </form>
           </div>
         </section>
-      </div>
-      <section class="map">
-        <h2 class="visually-hidden">Интерактивная карта</h2>
-        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1536657532097"  style="border:0" allowfullscreen></iframe>
         <div class="feedback-form">
           <p class="address">Адрес главного офиса</p>
           <p class="address">и офлайн-магазина:</p>
@@ -283,6 +279,10 @@
           <p class="address">(с 10 до 20 ежедневно)</p>
           <a href="form.html" class="btn feedback-form-btn">Форма обратной связи</a>
         </div>
+      </div>
+      <section class="map">
+        <h2 class="visually-hidden">Интерактивная карта</h2>
+        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1536657532097"  style="border:0" allowfullscreen></iframe>
       </section>
     </main>
     <footer class="page-footer">

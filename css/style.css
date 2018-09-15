@@ -177,7 +177,7 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 400px;
+  max-width: 700px;
   margin: 0;
   padding: 0;
 
@@ -675,31 +675,31 @@ img {
   line-height: 44px;
 }
 
-#product-1:checked ~ .site-wrapper {
+.product-1:checked ~ .site-wrapper {
   background-color: #849d8f;
   background-image: url("../img/slide1.png");
 }
 
-#product-2:checked ~ .site-wrapper {
+.product-2:checked ~ .site-wrapper {
   background-color: #8996a6;
   background-image: url("../img/slide2.png");
 }
 
-#product-3:checked ~ .site-wrapper {
+.product-3:checked ~ .site-wrapper {
   background-color: #9d8b84;
   background-image: url("../img/slide3.png");
 }
 
 
-#product-1:checked ~ .site-wrapper #slide1,
-#product-2:checked ~ .site-wrapper #slide2,
-#product-3:checked ~ .site-wrapper #slide3 {
+.product-1:checked ~ .site-wrapper .slide1,
+.product-2:checked ~ .site-wrapper .slide2,
+.product-3:checked ~ .site-wrapper .slide3 {
   display: block;
 }
 
-#product-1:checked ~ .site-wrapper label[for="product-1"],
-#product-2:checked ~ .site-wrapper label[for="product-2"],
-#product-3:checked ~ .site-wrapper label[for="product-3"] {
+.product-1:checked ~ .site-wrapper label[for="product-1"],
+.product-2:checked ~ .site-wrapper label[for="product-2"],
+.product-3:checked ~ .site-wrapper label[for="product-3"] {
   background-color: #ffffff;
 }
 
@@ -904,13 +904,13 @@ img {
   bottom: -60px;
 
   display: none;
-  min-width: 202px;
+  width: 204px;
   padding-left: 18px;
   padding-right: 18px;
   padding-top: 10px;
   padding-bottom: 12px;
 
-  margin-left: -101px;
+  margin-left: -102px;
 
   font-size: 18px;
   line-height: 24px;
@@ -1007,6 +1007,8 @@ img {
 }
 
 .news-blog-container {
+  position: relative;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1066,6 +1068,7 @@ img {
 }
 
 .news-desc {
+  display: block;
   margin: 0;
   width: 285px;
 
@@ -1171,8 +1174,6 @@ img {
 }
 
 .map {
-  position: relative;
-
   height: 430px;
   margin: 0;
   padding: 0;
@@ -1191,11 +1192,8 @@ img {
 .feedback-form {
   position: absolute;
   z-index: 20;
-  top: 50%;
-  right: 379px;
-  -webkit-transform: translatey(-50%);
-      -ms-transform: translatey(-50%);
-          transform: translatey(-50%);
+  top: 324px;
+  right: 27px;
 
   padding-top: 30px;
   padding-left: 26px;
@@ -1716,8 +1714,8 @@ img {
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 0.01px;
-  -o-text-overflow: '';
-     text-overflow: '';
+  -o-text-overflow: "";
+     text-overflow: "";
 }
 
 .select-list-form:hover {
@@ -1872,7 +1870,9 @@ img {
           user-select: none;
 }
 
-.radiobutton-indicator {
+.radiobutton-label::before {
+  content: "";
+
   position: absolute;
   top: -3px;
   left: -32px;
@@ -1883,12 +1883,12 @@ img {
   border-radius: 50%;
 }
 
-.radiobutton-indicator::after {
+.radiobutton-label::after {
   content: "";
 
   position: absolute;
-  top: 3px;
-  left: 3px;
+  top: 4px;
+  left: -25px;
 
   display: none;
   width: 8px;
@@ -1899,11 +1899,11 @@ img {
   border-radius: 50%;
 }
 
-.radiobutton-group-input:checked + .radiobutton-indicator::after {
+.radiobutton-group-input:checked + .radiobutton-label::after {
   display: block;
 }
 
-.radiobutton-group-input:focus + .radiobutton-indicator {
+.radiobutton-group-input:focus + .radiobutton-label::before{
 
   border-color: rgba(255, 255, 255, 0.8);
   -webkit-box-shadow:
@@ -1915,7 +1915,7 @@ img {
 }
 
 .checkbox-group {
-  margin-right: 15px;
+  margin-right: 13px;
 }
 
 .checkbox-group-container {
@@ -1925,13 +1925,15 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   padding-left: 47px;
   padding-right: 18px;
   padding-top: 10px;
   padding-bottom: 10px;
-
+  width: 704px;
 
   background-color: rgba(248, 247, 244, 0.2);
   border-radius: 30px;
@@ -1962,44 +1964,27 @@ img {
           user-select: none;
 }
 
-
-.checkbox-input +.checkbox-indicator {
-  content: "";
-
-  position: absolute;
-  top: -3px;
-  left: -27px;
-
-  width: 20px;
-  height: 20px;
-
-  border: 3px solid transparent;
-  border-radius: 2px;
-}
-
-
-.checkbox-input:checked + .checkbox-indicator::after {
+.checkbox-input:checked + .checkbox-label::after {
   content: url("../img/svg-gllacy/checkbox-on.svg");
 
   position: absolute;
   z-index: 10;
-  left: -8px;
-  top: -1px;
+  left: -31px;
+  top: -2px;
 }
 
-.checkbox-input + .checkbox-indicator::before {
+.checkbox-input + .checkbox-label::before {
   content: url("../img/svg-gllacy/checkbox-off.svg");
 
   position: absolute;
-
-  left: -8px;
-  top: -1px;
+  left: -31px;
+  top: -2px;
 
   width: 20px;
   height: 20px;
 }
 
-.checkbox-input:focus + .checkbox-indicator::before {
+.checkbox-input:focus + .checkbox-label::before {
 
   border-color: rgba(255, 255, 255, 0.8);
   -webkit-box-shadow:
@@ -2058,6 +2043,9 @@ img {
   list-style: none;
 }
 
+.catalog-container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 .pagintation-block {
   display: -webkit-box;
@@ -2066,28 +2054,17 @@ img {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-
-  /* width: 100%; */
   padding-bottom: 33px;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .pagination-list {
-  z-index: 100;
+  z-index: 10;
 
   display: -webkit-box;
 
   display: -ms-flexbox;
 
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-width: 188px;
   margin: 0;
   padding: 0;
 
@@ -2101,10 +2078,9 @@ img {
 .pagination-item {
   position: relative;
 
+  margin-left: 20px;
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -2112,29 +2088,34 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
 
-  border-radius: 50%;
+.pagination-item-active {
+  margin-left: 25px;
+
   cursor: pointer;
 }
 
-.pagination-item-active::after {
+.pagination-item-active::before {
   content: "";
 
   position: absolute;
   top: -5px;
   left: -8px;
   z-index: -1;
-
   width: 26px;
   height: 26px;
 
-  border-radius: 50%;
   background-color: #ffffff;
+
+  border-radius: 50%;
+}
+
+.pagination-item-last {
+  margin-left: 25px;
 }
 
 .pagination-link {
-  display: block;
-
   color: #ffffff;
 }
 
